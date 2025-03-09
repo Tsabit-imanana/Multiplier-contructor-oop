@@ -1,23 +1,19 @@
-public class Bola {
-    
-    public double rad;
+class Bola {
+    private double radius;
 
-    // using set
-    public void setRadius(double rad) {
-        this.rad = rad;
+    public Bola() {
+        this.radius = 1.0; // Default value
     }
 
-    // using multiple constructor
-    Bola() {
-
+    public Bola(double radius) {
+        this.radius = radius;
     }
 
-    Bola(double rad) {
-        this.rad = rad;
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
 
-    public double ComputeAndSetVolume() {
-        double volume = 4.0/3 * 3.14 * this.rad * this.rad * this.rad;
-        return volume;
+    public double hitungVolume() {
+        return (4.0 / 3.0) * Math.PI * Math.pow(radius, 3);
     }
 }
