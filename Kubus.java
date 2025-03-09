@@ -1,23 +1,19 @@
-public class Kubus {
+class Kubus {
+    private double sisi;
 
-    public double sisi;
+    public Kubus() {
+        this.sisi = 1.0; // Default value
+    }
 
-    // using set value
+    public Kubus(double sisi) {
+        this.sisi = sisi;
+    }
+
     public void setSisi(double sisi) {
         this.sisi = sisi;
     }
 
-    // using multiple constructor
-    Kubus() {
-
-    }
-
-    Kubus(double sisi) {
-        this.sisi = sisi;
-    }
-
-    public double ComputeAndSetVolume() {
-        double volume = this.sisi * this.sisi * this.sisi;
-        return volume;
+    public double hitungVolume() {
+        return Math.pow(sisi, 3);
     }
 }
