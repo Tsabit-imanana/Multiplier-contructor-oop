@@ -1,27 +1,25 @@
-public class LimasPersegi {
-    
-    public double sisi, tinggi;
+class LimasPersegi {
+    private double sisi, tinggi;
 
-    // using set
+    public LimasPersegi() {
+        this.sisi = 1.0;
+        this.tinggi = 1.0;
+    }
+
+    public LimasPersegi(double sisi, double tinggi) {
+        this.sisi = sisi;
+        this.tinggi = tinggi;
+    }
+
     public void setSisi(double sisi) {
         this.sisi = sisi;
     }
+
     public void setTinggi(double tinggi) {
         this.tinggi = tinggi;
     }
 
-    // using multiple constructor
-    LimasPersegi(){
-
-    }
-
-    LimasPersegi(double sisi, double tinggi) {
-        this.sisi = sisi;
-        this.tinggi = tinggi;
-    }
-
-    public double ComputeAndSetVolume() {
-        double volume = 1.0/3 * (this.sisi * this.sisi) * this.tinggi; 
-        return volume;
+    public double hitungVolume() {
+        return (1.0 / 3.0) * Math.pow(sisi, 2) * tinggi;
     }
 }
