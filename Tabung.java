@@ -1,28 +1,25 @@
-public class Tabung {
-    
-    public double rad, tinggi;
+class Tabung {
+    private double radius, tinggi;
 
-    // using set
-    public void setRadius(double rad) {
-        this.rad = rad;
+    public Tabung() {
+        this.radius = 1.0;
+        this.tinggi = 1.0;
+    }
+
+    public Tabung(double radius, double tinggi) {
+        this.radius = radius;
+        this.tinggi = tinggi;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
 
     public void setTinggi(double tinggi) {
         this.tinggi = tinggi;
     }
 
-    // using multiple constructor
-    Tabung() {
-
-    }
-
-    Tabung(double rad, double tinggi) {
-        this.rad = rad;
-        this.tinggi = tinggi;
-    }
-
-    public double ComputeAndSetVolume() {
-        double volume = 3.14 * (this.rad * this.rad) * this.tinggi;
-        return volume;
+    public double hitungVolume() {
+        return Math.PI * Math.pow(radius, 2) * tinggi;
     }
 }
